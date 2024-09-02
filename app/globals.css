@@ -17,12 +17,12 @@
 
 /* css variable for responsive size */
 :root {
-  --nav-height: 3.8rem;
+  --nav-height: 4.8rem;
 }
 
 @media screen and (max-width: 968px) {
   :root {
-    --nav-height: 3.5rem;
+    --nav-height: 4.5rem;
   }
 }
 
