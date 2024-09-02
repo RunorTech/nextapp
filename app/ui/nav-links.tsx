@@ -5,6 +5,8 @@ import Link from 'next/link'
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import CloseIcon from '@mui/icons-material/Close';
 import { toggleMenu } from '@/lib/utils';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Input_search from '@/components/ui/Input_search';
 
 const NavLinks = () => {
   const pathname = usePathname();
@@ -28,7 +30,10 @@ const NavLinks = () => {
           <CloseIcon />
         </div>
         <div className="side-slide">
-
+         <div className="profile-handle">
+         <span className='avatar'><AccountCircleIcon /> Sign In</span>
+         <Input_search/>
+         </div>
         </div>
 
       </div>
