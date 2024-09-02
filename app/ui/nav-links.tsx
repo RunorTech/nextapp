@@ -13,7 +13,7 @@ const NavLinks = () => {
   toggleMenu();
 
   return (
-    <nav className='nav-bar'>
+    <nav className='nav-bar' id='nav-bar'>
       <div className="desktop-nav">
         <div className="nav-logo">
           TECH LOGO
