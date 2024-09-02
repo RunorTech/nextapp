@@ -2,7 +2,6 @@ export const dynamic = 'force-dynamic'
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import NavLinks from "./ui/nav-links";
 
 
 const poppins = Poppins({
@@ -24,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <NavLinks/>
         {children}
       </body>
     </html>

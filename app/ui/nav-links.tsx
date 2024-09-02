@@ -6,7 +6,7 @@ import Link from 'next/link'
 const NavLinks = () => {
     const pathname = usePathname();
   return (
-    <nav>
+    <nav className='nav-bar'>
         <Link className={`link ${pathname === '/' ? 'active' : ''}`} href="/">home</Link>
     </nav>
   )
