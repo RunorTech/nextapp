@@ -4,14 +4,16 @@
   --border-color: rgba(156, 156, 156, 0.644);
   --shadow-color: rgba(0, 0, 0, 0.404);
   --nav-body--color: rgba(255, 255, 255, 0.32);
+  --main-text-color: black;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --body-color: rgb(17, 16, 41);
     --border-color: rgba(212, 212, 212, 0.37);
     --shadow-color: rgba(204, 204, 204, 0.404);
     --nav-body--color: rgba(54, 54, 85, 0.32);
+    --main-text-color: rgb(255, 255, 255);
   }
 }
 
@@ -23,6 +25,9 @@
 @media screen and (max-width: 968px) {
   :root {
     --nav-height: 4.5rem;
+  }
+  .nav-links{
+    display: none;
   }
 }
 
@@ -40,6 +45,7 @@ html {
 
 body {
   background-color: var(--body-color);
+  color: var(--main-text-color);
 
 }
 

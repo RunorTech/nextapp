@@ -21,7 +21,7 @@ const NavLinks = () => {
         <Link className={`link ${pathname === '/' ? 'active' : ''}`} href="/">home</Link>
         </div>
         <div className="nav-icon" onClick={toggleMenu}>
-        <MenuOpenIcon />
+        <MenuOpenIcon style={{width: 40, height: 40}} />
         </div>
        </div>
         <div className="mobile-nav">
