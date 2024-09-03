@@ -118,6 +118,7 @@ export const MobileSidebar = ({
           "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
         )}
         {...props}
+        onClick={() => setOpen(!open)}
       >
         <div className="flex justify-end z-20 w-full">
           <IconMenu2

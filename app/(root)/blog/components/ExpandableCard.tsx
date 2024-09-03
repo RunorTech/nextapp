@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import lapTopBag from "@/public/image/download.jpg"
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -208,8 +209,8 @@ const cards = [
   {
     description: "Lana Del Rey",
     title: "Summertime Sadness",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Play",
+    src: lapTopBag,
+    ctaText: "Read More",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
@@ -231,8 +232,8 @@ const cards = [
   {
     description: "Babbu Maan",
     title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Play",
+    src: lapTopBag,
+    ctaText: "Read More",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
@@ -254,8 +255,8 @@ const cards = [
   {
     description: "Metallica",
     title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
-    ctaText: "Play",
+    src: lapTopBag,
+    ctaText: "Read More",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
@@ -276,8 +277,8 @@ const cards = [
   {
     description: "Led Zeppelin",
     title: "Stairway To Heaven",
-    src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
-    ctaText: "Play",
+    src: lapTopBag,
+    ctaText: "Read More",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
@@ -297,8 +298,8 @@ const cards = [
   {
     description: "Mustafa Zahid",
     title: "Toh Phir Aao",
-    src: "https://assets.aceternity.com/demos/toh-phir-aao.jpeg",
-    ctaText: "Play",
+    src: lapTopBag,
+    ctaText: "Read More",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (

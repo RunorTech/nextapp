@@ -11,24 +11,28 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { NavbarDemo } from "./NavBar";
-import Blog from "../(root)/blog/components/Blog";
+import HomeIcon from '@mui/icons-material/Home';
 import { usePageContext } from "../pageContext";
+import BookIcon from '@mui/icons-material/Book';
+import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 
 export function SidebarDemo() {
   const links = [
     {
-      label: "Dashboard",
-      href: "#",
+      label: "Home",
+      href: "/",
       icon: (
-        <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <HomeIcon className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Profile",
+      label: "Developer profile",
       href: "#",
       icon: (
-        <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <>
+        <CodeRoundedIcon className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconUserBolt/>
+        </>
       ),
     },
     {
@@ -49,7 +53,7 @@ export function SidebarDemo() {
       label: "Blog",
       href: "/blog",
       icon: (
-        <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <BookIcon className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
