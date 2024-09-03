@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import NavLinks from "../ui/nav-links";
+import { NavbarDemo } from "../ui/NavBar";
 
 export default async function RootLayout({
   children,
@@ -12,7 +12,7 @@ export default async function RootLayout({
 
   return (
     <main className="flex h-screen w-full font-inter">
-        <NavLinks/>
+<NavbarDemo/>
         {children}
     </main>
   );

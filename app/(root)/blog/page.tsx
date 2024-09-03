@@ -5,8 +5,7 @@ import Blog from './components/Blog'
 const BlogHomePage = () => {
     return (
         <main>
-            <Hero />
-            <Blog/>
+          
         </main>
     )
 }
