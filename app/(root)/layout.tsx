@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { NavbarDemo } from "../ui/NavBar";
+import { SidebarDemo } from "../ui/SideBar";
 
 export default async function RootLayout({
   children,
@@ -11,9 +12,11 @@ export default async function RootLayout({
 
 
   return (
-    <main className="flex h-screen w-full font-inter">
-<NavbarDemo/>
-        {children}
-    </main>
+    <>
+      {/* <NavbarDemo /> */}
+    
+      <SidebarDemo/>
+      {children}
+    </>
   );
 }

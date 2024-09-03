@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function NavbarDemo() {
   return (
-      <Navbar className="top-0 " />
+      <Navbar className="s" />
   );
 }
 
@@ -13,7 +13,7 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("inset-x-0 div-nav-w mx-auto z-50", className)}
     >
       <Menu setActive={setActive} >
         <MenuItem setActive={setActive} active={active} item="Services">
