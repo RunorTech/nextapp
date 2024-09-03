@@ -1,3 +1,4 @@
+
 /* css variable for light and dark mode */
 :root {
   --body-color: rgb(252, 252, 252);
@@ -122,6 +123,8 @@ transition: .5s;
 .hero-container{
   background-image: url("https://cdn.mos.cms.futurecdn.net/7DZpRoHxZLjAbQthxVk6p3.png");
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
   background-size: cover;
   background-position: center top;
   height: 100vh;
@@ -136,4 +139,24 @@ transition: .5s;
   display: flex;
   align-items: center;
   
+}
+.blog-card{
+  width: 300px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 23rem;
+}
+.blog-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-card--active {
+
 }

@@ -35,7 +35,7 @@ const NavLinks = () => {
          <Input_search/>
          </div>
          <div className="nav-links-mobile" onClick={toggleMenu}>
-          <Link className={`link ${pathname === '/blog' ? 'active' : ''}`} href="/blog">Blog</Link>
+          <Link  className={`link ${pathname === '/blog' ? 'active' : ''}`} href="/blog">Blog</Link>
           <Link className={`link ${pathname === '/' ? 'active' : ''}`} href="/">Home</Link>
         </div>
         </div>
