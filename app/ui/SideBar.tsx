@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { NavbarDemo } from "./NavBar";
+import Blog from "../(root)/blog/components/Blog";
 
 export function SidebarDemo() {
   const links = [
@@ -114,10 +115,18 @@ export const LogoIcon = () => {
 };
 
 // Dummy dashboard component with content
-const Dashboard = () => {
-  return (
+ export const Dashboard = () => {
+
+    const [content , setContent] = useState(
     <div className="dashboard-body">
       <NavbarDemo/>
+      <Blog/>
     </div>
+    );
+
+  return (
+    <>
+    {content}
+    </>
   );
 };
