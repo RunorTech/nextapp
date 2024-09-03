@@ -2,6 +2,7 @@
 import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import blogImage from '@/public/image/images.jpg'
 
 const content = [
   {
@@ -21,7 +22,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src="/linear.webp"
+          src={blogImage}
           width={300}
           height={300}
           className="h-full w-full object-cover"

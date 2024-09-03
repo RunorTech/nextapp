@@ -14,7 +14,6 @@ const BlogHomePage = () => {
         <>
         { useEffect(() => {
         setContent( <div className="dashboard-body">
-            <NavbarDemo/>
             <Blog/>
           </div>)
     },[])}

@@ -156,3 +156,11 @@ transition: .5s;
   display: flex;
   justify-content: center;
 }
+
+
+useEffect(() => {
+        setContent( <div className="dashboard-body">
+            <NavbarDemo/>
+            <Blog/>
+          </div>)
+    },[])
