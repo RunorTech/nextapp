@@ -15,6 +15,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import { usePageContext } from "../pageContext";
 import BookIcon from '@mui/icons-material/Book';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
+import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
+import SendRoundedIcon from '@mui/icons-material/SendRounded';
 
 export function SidebarDemo() {
   const links = [
@@ -29,24 +31,22 @@ export function SidebarDemo() {
       label: "Developer profile",
       href: "#",
       icon: (
-        <>
         <CodeRoundedIcon className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-        <IconUserBolt/>
-        </>
+      
       ),
     },
     {
-      label: "Settings",
+      label: "Use Note project",
       href: "#",
       icon: (
-        <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <EditNoteRoundedIcon className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Logout",
+      label: "Job Request",
       href: "#",
       icon: (
-        <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <SendRoundedIcon className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
@@ -68,7 +68,7 @@ export function SidebarDemo() {
       <Sidebar open={open} setOpen={setOpen}>
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-            {open ? <Logo /> : <LogoIcon />}
+            {open ? <><LogoIcon/> RUNOR</> : <LogoIcon /> }
             <div className="mt-8 flex flex-col gap-2">
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />

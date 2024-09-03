@@ -131,8 +131,3 @@ body {
   background: white;
   width: 100%;
 }
-body > div > div.dashboard-body > div.inset-x-0.div-nav-w.mx-auto.z-50.s > nav > div:nth-child(3) > div{
-  
-  z-index: 2147483647 !important;
-
-}
