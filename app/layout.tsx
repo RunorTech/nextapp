@@ -2,6 +2,7 @@ export const dynamic = 'force-dynamic'
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { PageProvider } from "./pageContext";
 
 
 const poppins = Poppins({
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        {children}
+      <PageProvider>
+      {children}
+      </PageProvider>
       </body>
     </html>
   );

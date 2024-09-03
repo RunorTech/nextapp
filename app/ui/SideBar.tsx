@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {
   IconArrowLeft,
@@ -13,6 +13,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { NavbarDemo } from "./NavBar";
 import Blog from "../(root)/blog/components/Blog";
+import { usePageContext } from "../pageContext";
 
 export function SidebarDemo() {
   const links = [
@@ -116,14 +117,7 @@ export const LogoIcon = () => {
 
 // Dummy dashboard component with content
  export const Dashboard = () => {
-
-    const [content , setContent] = useState(
-    <div className="dashboard-body">
-      <NavbarDemo/>
-      <Blog/>
-    </div>
-    );
-
+    const { content , setContent} = usePageContext();
   return (
     <>
     {content}

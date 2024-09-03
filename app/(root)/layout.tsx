@@ -13,7 +13,7 @@ export default async function RootLayout({
 
   return (
     <>
-      {/* <NavbarDemo /> */}
+      <SidebarDemo/>
       {children}
     </>
   );
