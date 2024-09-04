@@ -152,36 +152,6 @@ body {
   background-color: var(--dashboard-more);
   width: 100%;
 }
-.dashboard-body-home{
-    background: linear-gradient(212deg, #d9ce2b, #ce2ce8, #06d2f3);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 2s ease infinite;
-    -moz-animation: AnimationName 2s ease infinite;
-    -o-animation: AnimationName 2s ease infinite;
-    animation: AnimationName 2s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:57% 0%}
-    50%{background-position:44% 100%}
-    100%{background-position:57% 0%}
-}
 .side-bar{
   background-color: var(--sidebar-bg-color);
 }

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function NavbarDemo() {
   return (
-      <Navbar className="s" />
+      <Navbar className="nav-bar" />
   );
 }
 

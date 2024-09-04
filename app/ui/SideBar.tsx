@@ -17,6 +17,7 @@ import BookIcon from '@mui/icons-material/Book';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
 export function SidebarDemo() {
   const links = [
@@ -54,6 +55,13 @@ export function SidebarDemo() {
       href: "/blog",
       icon: (
         <BookIcon className="my-main-text h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Game",
+      href: "/game",
+      icon: (
+        <SportsEsportsIcon className="my-main-text h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
