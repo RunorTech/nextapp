@@ -11,9 +11,9 @@ export default function Home() {
   return (   
     <>
     { useEffect(() => {
-    setContent( <div className="dashboard-body">
+    setContent( <div className="dashboard-body-home">
       <NavbarDemo/> 
-       <ScrollArea className="h-[100vh] w-[100vw] rounded-md border p-4">
+       <ScrollArea className="h-[100vh] w-[100vw]">
        
         </ScrollArea>
       </div>)
