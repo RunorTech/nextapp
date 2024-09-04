@@ -73,8 +73,9 @@
   --body-color: rgb(252, 252, 252);
   --border-color: rgba(207, 207, 207, 0.877);
   --shadow-color: rgba(0, 0, 0, 0.404);
-  --nav-body--color: rgba(255, 255, 255, 0);
+  --nav-body--color: rgba(255, 255, 255, 0.11);
   --main-text-color: black;
+  --main-text-less-color: rgb(39, 39, 39);
   --dashboard-color: rgb(255, 255, 255);
   --sidebar-bg-color: rgb(214, 214, 214);
   --side-bar-motion: rgb(255, 255, 255); 
@@ -87,8 +88,9 @@
     --body-color: rgb(10, 9, 26);
     --border-color: rgba(212, 212, 212, 0.37);
     --shadow-color: rgba(204, 204, 204, 0.404);
-    --nav-body--color: rgba(54, 54, 85, 0.055);
+    --nav-body--color: rgba(255, 255, 255, 0.151);
     --main-text-color: rgb(255, 255, 255);
+    --main-text-less-color: rgb(206, 206, 206);
     --dashboard-color: rgb(233, 233, 233);
     --sidebar-bg-color: rgb(52, 52, 71);
     --side-bar-motion: rgb(83, 87, 105); 
@@ -112,11 +114,11 @@ body {
 
 }
 .nav-bar{
-  background: var(--body-color);
+  background: var(--nav-body--color);
   border-radius: 0px 0px 6px 6px;
   box-shadow: 0 4px 30px var(--shadow-color);
-  backdrop-filter: blur(6.9px);
-  -webkit-backdrop-filter: blur(6.9px);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
   border: 1px solid var(--border-color);
   
 }
@@ -133,8 +135,12 @@ body {
   backdrop-filter: blur(26.9px);
   
 }
+.text-black{
+  color: #000;
+}
 .div-nav-w{
   max-width: 100%;
+  
 }
 .dashboard-body{
   background: var(--dashboard-color);
@@ -154,4 +160,14 @@ body {
 }
 .my-main-text{
   color: var(--main-text-color);
+}
+.blur-t-bg{
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+}
+.expand-active{
+background-color: var(--body-color);
+}
+.my-main-text-less{
+  color: var(--main-text-less-color);
 }
