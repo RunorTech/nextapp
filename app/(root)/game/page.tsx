@@ -3,7 +3,7 @@ import { usePageContext } from '@/app/pageContext';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import React, { useEffect } from 'react'
 
-const page = () => {
+const GamePage = () => {
     const { content, setContent } = usePageContext();
   return (
     <>
@@ -18,4 +18,4 @@ const page = () => {
   )
 }
 
-export default page
+export default GamePage
