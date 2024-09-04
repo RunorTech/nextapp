@@ -80,6 +80,7 @@
   --sidebar-bg-color: rgb(214, 214, 214);
   --side-bar-motion: rgb(255, 255, 255); 
   --logo-color: rgb(0, 0, 0);
+  --dashboard-more: rgb(255, 255, 255);
  
 }
 
@@ -95,6 +96,7 @@
     --sidebar-bg-color: rgb(52, 52, 71);
     --side-bar-motion: rgb(83, 87, 105); 
     --logo-color: rgb(255, 255, 255);
+    --dashboard-more: rgb(36, 37, 44);
   }
 }
 * {
@@ -144,6 +146,10 @@ body {
 }
 .dashboard-body{
   background: var(--dashboard-color);
+  width: 100%;
+}
+.dashboard-body-more{
+  background-color: var(--dashboard-more);
   width: 100%;
 }
 .side-bar{

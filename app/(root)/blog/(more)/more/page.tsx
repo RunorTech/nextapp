@@ -10,7 +10,7 @@ const MoreReadBlog = () => {
   return (
     <>
     {useEffect(() => {
-        setContent(<div className="dashboard-body">
+        setContent(<div className="dashboard-body-more">
             <ScrollArea className="h-[100vh]">
                <TracingBeamDemo/>
             </ScrollArea>
