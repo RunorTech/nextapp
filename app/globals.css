@@ -75,6 +75,11 @@
   --shadow-color: rgba(0, 0, 0, 0.404);
   --nav-body--color: rgba(255, 255, 255, 0);
   --main-text-color: black;
+  --dashboard-color: rgb(255, 255, 255);
+  --sidebar-bg-color: rgb(214, 214, 214);
+  --side-bar-motion: rgb(255, 255, 255); 
+  --logo-color: rgb(0, 0, 0);
+ 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,6 +89,10 @@
     --shadow-color: rgba(204, 204, 204, 0.404);
     --nav-body--color: rgba(54, 54, 85, 0.055);
     --main-text-color: rgb(255, 255, 255);
+    --dashboard-color: rgb(233, 233, 233);
+    --sidebar-bg-color: rgb(52, 52, 71);
+    --side-bar-motion: rgb(83, 87, 105); 
+    --logo-color: rgb(255, 255, 255);
   }
 }
 * {
@@ -128,6 +137,21 @@ body {
   max-width: 100%;
 }
 .dashboard-body{
-  background: white;
+  background: var(--dashboard-color);
   width: 100%;
+}
+.side-bar{
+  background-color: var(--sidebar-bg-color);
+}
+.icon-menu-mobile{
+  color: var(--main-text-color);
+}
+.side-bar-motion{
+  background-color: var(--side-bar-motion);
+}
+.icon-menu-logo{
+  background-color: var(--logo-color)
+}
+.my-main-text{
+  color: var(--main-text-color);
 }
