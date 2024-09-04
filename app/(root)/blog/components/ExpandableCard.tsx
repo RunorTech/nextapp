@@ -211,7 +211,7 @@ const cards = [
     title: "Summertime Sadness",
     src: lapTopBag,
     ctaText: "Read More",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/blog/more",
     content: () => {
       return (
         <p>
@@ -234,7 +234,7 @@ const cards = [
     title: "Mitran Di Chhatri",
     src: lapTopBag,
     ctaText: "Read More",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/blog/more",
     content: () => {
       return (
         <p>
@@ -257,7 +257,7 @@ const cards = [
     title: "For Whom The Bell Tolls",
     src: lapTopBag,
     ctaText: "Read More",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/blog/more",
     content: () => {
       return (
         <p>
@@ -279,7 +279,7 @@ const cards = [
     title: "Stairway To Heaven",
     src: lapTopBag,
     ctaText: "Read More",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/blog/more",
     content: () => {
       return (
         <p>
@@ -300,7 +300,7 @@ const cards = [
     title: "Toh Phir Aao",
     src: lapTopBag,
     ctaText: "Read More",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/blog/more",
     content: () => {
       return (
         <p>
