@@ -11,7 +11,7 @@ const GamePage = () => {
     <>
       {useEffect(() => {
         setContent(
-          <div className="dashboard-body">
+          <div className="dashboard-body-game">
             <div className="card">
               <div className="cover ">
                 <span className="card-front"><CardDemo /></span>
