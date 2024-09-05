@@ -6,15 +6,21 @@ import { TextRevealCardPreview } from '../components/CardReveal';
 import { CardDemo } from '../components/CardDemo';
 
 const GamePage = () => {
-    const { content, setContent } = usePageContext();
+  const { content, setContent } = usePageContext();
   return (
     <>
       {useEffect(() => {
         setContent(
-        <div className="dashboard-body">
-         {/* <TextRevealCardPreview/> */}
-         <CardDemo/>
-        </div>)
+          <div className="dashboard-body">
+            <div className="card">
+              <div className="cover ">
+                <span className="card-front"><CardDemo /></span>
+                <div className="card-back">
+                  <a href="#"><TextRevealCardPreview /></a>
+                </div>
+              </div>
+            </div>
+          </div>)
       }, [])}
     </>
   )

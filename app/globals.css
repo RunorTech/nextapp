@@ -177,3 +177,72 @@ background-color: var(--body-color);
 .my-main-text-less{
   color: var(--main-text-less-color);
 }
+
+:root{ --transition-time: 2.3s;}
+
+
+.card{
+	position: relative;
+	height: 400px;
+	width: 400px;
+	margin: 10px 0;
+	transition: ease all var(--transition-time);
+	perspective: 1200px;
+	&:hover{
+		.cover{
+			transform: rotateX(0deg) rotateY(-180deg);
+			&:before{
+				transform: translateZ(30px);
+			}
+			&:after{
+				background-color: black;
+			}
+			.card-front{
+				transform: translateZ(60px);
+			}
+			a{
+				transform: translateZ(-60px) rotatey(-180deg);
+			}
+		}
+	}
+	
+	.cover{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform-style: preserve-3d;
+  	transition: ease all var(--transition-time);
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		
+	
+		.card-front{
+			position: absolute;
+			top: 5px;
+			right: 8px;
+			transform-style: preserve-3d;
+  		transition: ease all var(--transition-time);
+			z-index:4;
+			transform: translateZ(0px);
+		}
+	}
+	.card-back{
+		position: absolute;
+		height: fit-content;
+		width: fit-content;
+		transform-style: preserve-3d;
+  	transition: ease all var(--transition-time);
+		transform: translateZ(-1px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a{
+			transform: translateZ(-1px) rotatey(-180deg);
+			outline: none;
+      position: relative;
+      top: 8px;
+			right: -38px;
+		}
+	}
+}
