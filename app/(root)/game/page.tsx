@@ -3,6 +3,7 @@ import { usePageContext } from '@/app/pageContext';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import React, { useEffect } from 'react'
 import { TextRevealCardPreview } from '../components/CardReveal';
+import { CardDemo } from '../components/CardDemo';
 
 const GamePage = () => {
     const { content, setContent } = usePageContext();
@@ -11,7 +12,8 @@ const GamePage = () => {
       {useEffect(() => {
         setContent(
         <div className="dashboard-body">
-         <TextRevealCardPreview/>
+         {/* <TextRevealCardPreview/> */}
+         <CardDemo/>
         </div>)
       }, [])}
     </>
