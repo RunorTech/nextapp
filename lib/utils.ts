@@ -7,3 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 export const toggleMenu = () => {
   console.log("menu")
 }
+
+ export const changeCard = () => {
+  const cardFlip = document.getElementById('card');
+  cardFlip?.classList.toggle("active");
+  };

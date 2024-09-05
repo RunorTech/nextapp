@@ -82,10 +82,11 @@
   --logo-color: rgb(0, 0, 0);
   --dashboard-more: rgb(255, 255, 255);
   --transition-time: 2.3s;
+  --card-right: -48px
  
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --body-color: rgb(10, 9, 26);
     --border-color: rgba(212, 212, 212, 0.37);
@@ -190,29 +191,45 @@ background-color: var(--body-color);
 }
 
 
-
+.active{
+  .cover{
+    transform: rotateX(0deg) rotateY(-180deg);
+    &:before{
+      transform: translateZ(30px);
+    }
+    .card-front{
+      transform: translateZ(60px);
+    }
+    a{
+      transform: translateZ(-60px) rotatey(-180deg);
+    }
+  }
+}
+.card-button{
+  position: absolute;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+ bottom: 1rem;
+ gap: 1rem;
+ 
+}
+.card-button button{
+  background-color: var(--body-color);
+  color: var(--main-text-color);
+  width: 100px;
+  padding:  .75rem;
+  border-radius: 2rem;
+  border: 2px solid var(--border-color);
+}
 
 .card{
 	position: relative;
 	height: 400px;
 	width: 400px;
-	margin: 10px 0;
+	margin: 1rem 0;
 	transition: ease all var(--transition-time);
 	perspective: 1200px;
-	&:hover{
-		.cover{
-			transform: rotateX(0deg) rotateY(-180deg);
-			&:before{
-				transform: translateZ(30px);
-			}
-			.card-front{
-				transform: translateZ(60px);
-			}
-			a{
-				transform: translateZ(-60px) rotatey(-180deg);
-			}
-		}
-	}
 	
 	.cover{
 		position: absolute;
@@ -220,15 +237,13 @@ background-color: var(--body-color);
 		width: 100%;
 		transform-style: preserve-3d;
   	transition: ease all var(--transition-time);
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
+
 		
 	
 		.card-front{
 			position: absolute;
 			top: 5px;
-			right: 8px;
+			right: 30px;
 			transform-style: preserve-3d;
   		transition: ease all var(--transition-time);
 			z-index:4;
@@ -249,8 +264,13 @@ background-color: var(--body-color);
 			transform: translateZ(-1px) rotatey(-180deg);
 			outline: none;
       position: relative;
-      top: 8px;
-			right: -38px;
+      top: 14px;
+			right: var(--card-right)
 		}
 	}
+}
+@media screen and (max-width: 968px) {
+  :root {
+    --card-right: -36px;
+  }
 }

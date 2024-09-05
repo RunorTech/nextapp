@@ -11,7 +11,7 @@ export function CardDemo() {
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
-      <CardTitle>C H O O S E &nbsp;  Y O U R &nbsp;  D E S T I N Y</CardTitle>
+      <CardTitle>C H O O S E &nbsp;  Y O U R &nbsp;  F A T E</CardTitle>
       <CardDescription>
        you break the rules you leave the game
       </CardDescription>
@@ -146,7 +146,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "max-w-sm w-[28rem] h-[30rem] mx-auto p-8 rounded-xl border border-[rgba(255,255,255,0.10)] dark:bg-[rgba(40,40,40,0.70)] bg-gray-100 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group",
+        "max-w-sm w-[20.25rem] h-[30rem] mx-auto p-8 rounded-xl border border-[rgba(255,255,255,0.10)] dark:bg-[rgba(40,40,40,0.70)] bg-gray-100 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group",
         className
       )}
     >
