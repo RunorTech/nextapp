@@ -2,6 +2,7 @@ import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 import api from "./axios"
 import { NextApiRequest, NextApiResponse } from 'next';
+import axios from "axios";
 
 
 export function cn(...inputs: ClassValue[]) {
@@ -20,12 +21,11 @@ export const toggleCard = () => {
   cardFlip?.classList.remove("active");
 }
 
-export const checkDataFlipCard = async () => {
+export const checkDataFlipCard = async (task : string) => {
   let checked = null;
-  const result = await fetchData();
+  const result = await apiRequest(task);
   checked = result;
-  checked ? changeCard() : toggleCard();
-
+  checked ? changeCard() : null;
   return checked;
 }
 
@@ -39,7 +39,18 @@ export const fetchData = async () => {
   }
 };
 
-export const apiRequest = async () => {
+export const apiRequest = async (task : string) => {
+  const API_URL = "https://game-truth-or-dare.onrender.com";
+  try {
+    const response = await axios.get(API_URL + task);
+    const result = response.data;
+    console.log(result)
+    return result;
+  } catch (error) {
+    console.log('Error fetching data:', error);
+  }
+ 
+ 
 
 }
 interface ApiResponseTruth {
@@ -59,7 +70,7 @@ interface ApiResponseDare {
 //   try {
 //     const response = await api.get('/endpoint'); // Replace '/endpoint' with your API endpoint
 //     res.status(200).json(response.data);
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
+//   } catch (error) {
+//     res.status(500).json(error);
 //   }
 // }
