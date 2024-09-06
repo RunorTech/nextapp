@@ -24,7 +24,7 @@ export const checkDataFlipCard = async () => {
   let checked = null;
   const result = await fetchData();
   checked = result;
-  checked ? changeCard() : null;
+  checked ? changeCard() : toggleCard();
 
   return checked;
 }

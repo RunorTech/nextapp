@@ -16,8 +16,8 @@ const GamePage =() => {
 
 
   const getApiData = async () => {
-    const info = await checkDataFlipCard();
     checkDataFlipCard();
+    const info = await checkDataFlipCard();
     setApiData(info);  
   }
 
@@ -45,13 +45,13 @@ const GamePage =() => {
             }} className='turn-over-button'>Done </button>)
             : (<div className="card-button">
               <button name='truth' onClick={() => {
-                apiData? setFlipCard(true) : setFlipCard(false);
                 getApiData()
+                apiData? setFlipCard(true) : alert("failed to make request please try again");
                 setCount(count + 1)
               }}>Truth</button>
               <button name='dare' onClick={() => {
-                apiData? setFlipCard(true) : setFlipCard(false);
                 getApiData()
+                apiData? setFlipCard(true) :alert("failed to make request please try again");
                 setCount(count + 1)
               }}>Dare</button>
             </div>)}
