@@ -16,11 +16,9 @@ const GamePage =() => {
 
 
   const getApiData = async () => {
-    
-    setFlipCard(true);
     const info = await checkDataFlipCard();
     checkDataFlipCard();
-    setApiData(info); 
+    setApiData(info);  
   }
 
   const handleToggle = () => {
@@ -31,7 +29,6 @@ const GamePage =() => {
   return (
     <>
       {useEffect(() => { 
-        console.log(count)
         setContent(
           <div className="dashboard-body-game">
             <div id='card' className="card ">
@@ -48,10 +45,12 @@ const GamePage =() => {
             }} className='turn-over-button'>Done </button>)
             : (<div className="card-button">
               <button name='truth' onClick={() => {
+                apiData? setFlipCard(true) : setFlipCard(false);
                 getApiData()
                 setCount(count + 1)
               }}>Truth</button>
               <button name='dare' onClick={() => {
+                apiData? setFlipCard(true) : setFlipCard(false);
                 getApiData()
                 setCount(count + 1)
               }}>Dare</button>
