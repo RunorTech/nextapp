@@ -86,7 +86,7 @@
  
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --body-color: rgb(10, 9, 26);
     --border-color: rgba(212, 212, 212, 0.37);
@@ -214,7 +214,12 @@ background-color: var(--body-color);
  gap: 1rem;
  
 }
-.card-button button{
+.turn-over-button{
+  position: absolute;
+  height: 50px;
+  bottom: 1rem;
+}
+.card-button button, .turn-over-button{
   background-color: var(--body-color);
   color: var(--main-text-color);
   width: 100px;

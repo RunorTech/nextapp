@@ -1,17 +1,37 @@
 "use client"
 import { usePageContext } from '@/app/pageContext';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { TextRevealCardPreview } from '../components/CardReveal';
 import { CardDemo } from '../components/CardDemo';
-import { changeCard } from '@/lib/utils';
+import { changeCard, checkDataFlipCard, fetchData, toggleCard } from '@/lib/utils';
 
-const GamePage = () => {
+const GamePage =() => {
   const { content, setContent } = usePageContext();
-  changeCard();
+  const [apiData , setApiData] = useState(null);
+  const [count , setCount] = useState(0);
+  const [flipCard , setFlipCard] = useState(false);
+  const truth = "truth";
+
+
+
+  const getApiData = async () => {
+    
+    setFlipCard(true);
+    const info = await checkDataFlipCard();
+    checkDataFlipCard();
+    setApiData(info); 
+  }
+
+  const handleToggle = () => {
+    toggleCard();
+    setFlipCard(false);
+  }
+ 
   return (
     <>
-      {useEffect(() => {
+      {useEffect(() => { 
+        console.log(count)
         setContent(
           <div className="dashboard-body-game">
             <div id='card' className="card ">
@@ -22,12 +42,22 @@ const GamePage = () => {
                 </div>
               </div>
             </div>
-            <div className="card-button">
-              <button onClick={changeCard}>Truth</button>
-              <button onClick={changeCard}>Dare</button>
-            </div>
+            {flipCard ? ( <button onClick={() => {
+              handleToggle();
+              setCount(count + 1)
+            }} className='turn-over-button'>Done </button>)
+            : (<div className="card-button">
+              <button name='truth' onClick={() => {
+                getApiData()
+                setCount(count + 1)
+              }}>Truth</button>
+              <button name='dare' onClick={() => {
+                getApiData()
+                setCount(count + 1)
+              }}>Dare</button>
+            </div>)}
           </div>)
-      }, [])}
+      }, [count])}
     </>
   )
 }

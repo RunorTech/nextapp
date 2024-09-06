@@ -11,7 +11,7 @@ export function TextRevealCardPreview() {
     <div className="flex items-center justify-center bg-[#0E0E10]">
       <TextRevealCard
         text="hover here"
-        revealText="I know the chemistry and the hover effect is lon is the ojgh sry hyoadbvy  I know the chemistry and the hover effect is lon is the ojgh sry hyoadbvy  "
+        revealText=" jump up five times "
       >
         <TextRevealCardTitle>
           Your Task : .
