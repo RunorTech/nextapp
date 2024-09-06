@@ -22,9 +22,8 @@ export const toggleCard = () => {
 }
 
 export const checkDataFlipCard = async (task : string) => {
-  let checked = null;
   const result = await apiRequest(task);
-  checked = result;
+  let checked = result;
   checked ? changeCard() : null;
   return checked;
 }
@@ -44,14 +43,11 @@ export const apiRequest = async (task : string) => {
   try {
     const response = await axios.get(API_URL + task);
     const result = response.data;
-    console.log(result)
     return result;
   } catch (error) {
     console.log('Error fetching data:', error);
   }
  
- 
-
 }
 interface ApiResponseTruth {
   // Define the structure of the response data here

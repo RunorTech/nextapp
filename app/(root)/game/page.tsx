@@ -13,19 +13,19 @@ const GamePage = () => {
   const [flipCard, setFlipCard] = useState(false);
   // const truth = "truth";
   // const buttonRef = useRef(null);
-
+  const [ready, setReady] = useState(false);
+  
   useEffect ( () => {
-    onstart();
-  },[])
+    setCount(count + 1)
+  },[apiData])
 
   const onstart = async () => {
-    const info = await fetchData();
-    setApiData(info);
+   setReady(true);
   }
 
   const getApiData = async (task : string) => {
-    const info = await checkDataFlipCard(task);
-    setApiData(info);
+    setApiData(await checkDataFlipCard(task));
+    setFlipCard(true)
   }
 
   const handleToggle = () => {
@@ -47,19 +47,19 @@ const GamePage = () => {
                 </div>
               </div>
             </div>
-            {apiData ? (<>
+            {ready ? (<>
               {flipCard ? (<button onClick={() => {
                 handleToggle();
               }} className='turn-over-button'>Done </button>)
                 : (<div className="card-button">
                   <button  onClick={() => {
                     getApiData("/truth/random")
-                    apiData ? setFlipCard(true) : alert("Server is temporarily down please try again in 30sec");
+                    apiData ? setFlipCard(true) : setFlipCard(false);;
                     setCount(count + 1)
                   }}>Truth</button>
                   <button  onClick={() => {
                     getApiData("/dare/random")
-                    apiData ? setFlipCard(true) : alert("Server is temporarily down please try again in 30sec");
+                    apiData ? setFlipCard(true) :setFlipCard(false);;
                     setCount(count + 1)
                   }}>Dare</button>
                 </div>)}
